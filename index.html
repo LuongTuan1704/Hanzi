@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanzi writer</title>
+    <link rel="stylesheet" href="./appStyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.2/dist/hanzi-writer.min.js"></script>
+</head>
+<body>
+    <div class="appContainer">
+        <header class="appHeader">
+            <h1 class="appHeader-heading">viết chữ hán</h1>
+        </header>
+        <main class="appContent">
+            <div class="app-left">
+                <section id = 'target'></section>
+            </div> 
+            <div class="appFormWrapper">
+                <form class="form-data">
+                    <div class="form-field">
+                        <input required name="text-query" type="text" placeholder="viết chữ hán ở đây :)">
+                        <button type="submit">xem</button>
+                    </div>
+                </form>
+        </div>
+        </main>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

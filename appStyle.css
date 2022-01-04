@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+.appContainer{
+    height: 100vh;
+    background-color: dimgray;
+    overflow: hidden;
+}
+.appHeader{
+    height: 70px;  
+    line-height: 70px;
+    padding: 0 25px;
+}
+.appHeader-heading{
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    color: whitesmoke;
+}
+.appContent{
+    height: calc(100vh - 70px);
+     display: flex;
+     border-top: 2px solid #ddd;
+}
+.app-left{
+    min-width: calc(100% - 345px);
+    margin-right: 25px;
+    padding: 25px;
+    border-right: 2px solid #ddd;
+    overflow-y: scroll;
+}
+.app-left::-webkit-scrollbar{
+    display: none;
+}
+.appViewer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.app-left section > div > div{
+    width: 100%;
+    cursor: pointer;
+}
+#target > div:first-child{
+    border-top: 2px solid #ddd;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+#target > div:last-of-type{
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+#target > div{
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #ddd;
+    border-right: 2px solid #ddd;
+     border-left: 2px solid #ddd;
+    padding: 25px 15px;
+}
+#target > div h3{
+    width: 100%;
+    padding-left: 5px;
+    margin-top: 15px;
+    font-size: 1.8rem;
+    color: white;
+}
+.appFormWrapper{
+    margin-top: 25px;
+    min-width:320px ;
+    padding-right: 25px;
+}
+.form-data{
+    max-width: 720px;
+    display: flex;
+    justify-content: center;
+}
+.form-field{
+    flex: 1 1 50%;
+    display: flex;
+}
+
+.form-field input {
+    width: 100%;
+    padding: 6px 12px;
+    border-radius: 6px;
+    background-color: transparent;
+    font-size: 1.8rem;
+    color: floralwhite;
+    outline: none;
+}
+.form-field input::placeholder{
+    font-size: 1.2rem;
+   color: floralwhite;
+}
+.form-field button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+ margin-left: 5px;
+  color: white;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.6rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+@media (max-width: 720px){
+    .appHeader-heading{
+        text-align: center;
+    }
+    .app-left{
+        min-width: none;
+        width: 100%;
+        margin-right: 0;
+        border: none;
+        margin-bottom: 100px;
+    }
+    .appFormWrapper{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding-right: 0;
+        padding: 25px;
+    }
+}
